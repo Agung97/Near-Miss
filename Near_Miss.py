@@ -1,3 +1,16 @@
+# import modul yang dibutuhkan
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+import missingno as msno 
+%matplotlib inline
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import confusion_matrix, classification_report
+
+#Cek rasio label data
+df['test_outcome'].value_counts()/df.shape[0]
 
 
 #Undersampling pada data training
