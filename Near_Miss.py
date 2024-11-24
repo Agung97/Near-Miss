@@ -52,3 +52,11 @@ print('After Undersampling, the shape of test_y: {} \n'.format(y_test_miss.shape
   
 print("After Undersampling, counts of label '1': {}".format(sum(y_test_miss == 1)))
 print("After Undersampling, counts of label '0': {}".format(sum(y_test_miss == 0)))
+
+#----------------------------------------------------------------------------------------------------------------------------#
+
+#Cek distribusi label setelah undersampling
+#Data training
+pd.Series(y_train_miss).value_counts().plot(kind='bar', title='Class distribution after applying NearMiss', xlabel='test_outcome')
+#Data testing
+pd.Series(y_test_miss).value_counts().plot(kind='bar', title='Class distribution after applying NearMiss', xlabel='test_outcome')
